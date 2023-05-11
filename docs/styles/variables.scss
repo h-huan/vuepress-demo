@@ -1,0 +1,38 @@
+// @use 'sass:math';
+
+// theme colors
+$primary: #0077ff;
+$black: #333333;
+$white: #FFFFFF;
+$red: #f56c6c;
+$green: #67c23a;
+$blue: #0077ff;
+$yellow: #e6a23c;
+$grey: #97a8be;
+
+// colors
+$white-side: #E7F0FF;
+
+// font
+$font-family-base: 'MicrosoftYaHei';
+
+// typography 
+$font-size: 16px;
+$font-size-side: 20px;
+
+// logon color
+$login-icon: #AAAAAA;
+$login-icon-show: #929396;
+$login-icon-bg: #AAAAAA;
+$login-but-bg: linear-gradient(-90deg, #057EE8, #1263E0);
+$login-but-bg_hover: linear-gradient(180deg, rgb(55, 151, 237) 0%, rgb(65, 131, 230) 100%);
+
+// desktop
+$headerHeight: 50px;
+$sidebarWidth: 244px;
+$sidebarCollapseWidth: 64px;
+
+// sidebar
+$menuBg: #1F223A;
+// $menuHover: #252B42;
+// mobile 
