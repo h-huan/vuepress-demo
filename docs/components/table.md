@@ -3,15 +3,11 @@
 
 基础的按钮用法。
 
-
-<Table1></Table1>
-
-<table-index></table-index>
-
 :::demo 
 
 ```vue
 <template>
+  <hh-table></hh-table>
   <el-table :data="tableData" style="width: 100%">
     <el-table-column prop="date" label="Date" width="180" />
     <el-table-column prop="name" label="Name" width="180" />
