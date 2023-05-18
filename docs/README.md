@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo.png
+heroImage: /logo.svg
 actions:
 - text: Get Started
   link: /guide/

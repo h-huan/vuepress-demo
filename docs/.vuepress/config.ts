@@ -1,17 +1,10 @@
-/*
- * @Author: h-huan
- * @Date: 2023-05-11 14:03:47
- * @LastEditors: h-huan
- * @LastEditTime: 2023-05-11 17:45:43
- * @Description: 
- */
+
 import { pwaPlugin } from '@vuepress/plugin-pwa'
 import { pwaPopupPlugin } from '@vuepress/plugin-pwa-popup'
 import { searchPlugin } from '@vuepress/plugin-search'
-import { defineUserConfig, defaultTheme } from 'vuepress'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { defineUserConfig, defaultTheme } from 'vuepress'
 import { demoblockPlugin } from 'vuepress-plugin-demoblock-plus'
-import { viteBundler } from '@vuepress/bundler-vite'
 
 import { getDirname, path } from '@vuepress/utils'
 // @vuepress/back-to-top
@@ -24,16 +17,20 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '组件库',
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.ico' }],
+    ['meta', { name: 'keywords', content: '组件库网页' }],
+    ['meta', { name: 'description', content: '整理开发过程中的' }],
+    ['meta', { name: 'robots', content: 'all' }],
     // ['link', { rel: 'stylesheet', href: '/css/index.css' }], // 修改默认样式
-    ["link", { rel: "stylesheet", href: "/css/style.css" }],  //自定义样式,也可以使用styles/index.styl来设置
-    ["script", { charset: "utf-8", src: "/js/main.js" }],   //自定义js文件
+    // ["link", { rel: "stylesheet", href: "/css/style.css" }],  //自定义样式,也可以使用styles/index.styl来设置
+    // ["script", { charset: "utf-8", src: "/js/main.js" }],   //自定义js文件
   ],
   description: '基于vue3 + element plus的UI组件库',
   theme: defaultTheme({
     // 导航栏配置
     navbar,
-    // sidebar
+    // 侧边栏数组
+    // 所有页面会使用相同的侧边栏
     sidebar,
     // 侧边栏数组
     lastUpdatedText: '上次更新',
@@ -48,11 +45,6 @@ export default defineUserConfig({
     // a11y
     openInNewWindow: '在新窗口打开',
     toggleSidebar: '切换侧边栏',
-
-  }),
-  bundler: viteBundler({
-    viteOptions: {},
-    vuePluginOptions: {},
   }),
   plugins: [
     pwaPlugin(),
@@ -71,7 +63,6 @@ export default defineUserConfig({
         },
       }, maxSuggestions: 5
     }),
-    // 自动注册组件
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, '../../packages/components'), // 需要自动引入的组件所在的文件夹
       componentsPatterns: ['**/*.vue'], // 组件格式为.vue结尾的文件

@@ -18,8 +18,8 @@
 
 ``` vue 
 <template>
-  <base-h1 msg="hello world">
-  </base-h1>
+  <hh-h1 msg="hello world">
+  </hh-h1>
 </template>
 <script lang="ts" setup>
 import {hhH1} from 'xxx-ui' 
