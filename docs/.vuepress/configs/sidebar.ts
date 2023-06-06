@@ -1,6 +1,5 @@
 
 export default {
-  '/api/': getAPISidebar(),
   '/components/': getComponentsSidebar(),
   '/guide/': getGuideSidebar()
 }
@@ -30,24 +29,18 @@ function getGuideSidebar() {
       isGroup: true,
       text: '指南',
       children: [
-        { text: '文档1', link: '/guide/button.md' },
-        { text: '文档2', link: '/guide/modal.md' }
+        { text: '文档1', link: '/guide/intromd.md' },
+        { text: '文档2', link: '/guide/intromd.md' }
       ]
     },
     {
       isGroup: true,
       text: '教程',
       children: [
-        { text: '教程1', link: '/guide/button.md' },
-        { text: '教程2', link: '/guide/modal.md' }
+        { text: '教程1', link: '/guide/intromd.md' },
+        { text: '教程2', link: '/guide/intromd.md' }
       ]
     }
-  ]
-}
-
-function getAPISidebar() {
-  return [
-    { text: 'API参考', link: '/api/index.md' }
   ]
 }
 
