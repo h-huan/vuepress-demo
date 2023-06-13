@@ -1,0 +1,12 @@
+{
+  "name": "hh-ui",
+  "private": false,
+  "version": "0.0.1",
+  "description": "一个简单的组件库",
+  "main": "hh-ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

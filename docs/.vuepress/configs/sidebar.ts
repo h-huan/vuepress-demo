@@ -1,3 +1,4 @@
+import type { SidebarConfig } from '@vuepress/theme-default'
 
 export default {
   '/components/': getComponentsSidebar(),
@@ -8,7 +9,21 @@ function getComponentsSidebar() {
   return [
     {
       isGroup: true,
-      text: '组件',
+      text: 'Vue组件',
+      children: [
+        {
+          text: 'Button 按钮',
+          link: '/components/button.md'
+        },
+        {
+          text: 'table 标签页',
+          link: '/components/table.md'
+        }
+      ]
+    },
+    {
+      isGroup: true,
+      text: 'Element-plus',
       children: [
         {
           text: 'Button 按钮',
@@ -25,6 +40,14 @@ function getComponentsSidebar() {
 
 function getGuideSidebar() {
   return [
+    {
+      isGroup: true,
+      text: '指南',
+      children: [
+        { text: '文档1', link: '/guide/intromd.md' },
+        { text: '文档2', link: '/guide/intromd.md' }
+      ]
+    },
     {
       isGroup: true,
       text: '指南',

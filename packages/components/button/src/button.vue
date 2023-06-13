@@ -1,17 +1,17 @@
 <template>
-  <h1> h1 组件</h1>
+  <h1> {{ msg }}</h1>
 </template>
 
 <script lang="ts">
 export default {
-  name: 'hhH1'
+  name: 'baseH1'
 }
 </script>
 
 <script lang="ts" setup>
 
-
+const props = defineProps<{
+  msg: string
+}>()
 
 </script>
-
-<style lang="scss"></style>
